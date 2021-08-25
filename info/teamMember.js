@@ -1,6 +1,6 @@
 // The main or parent class
 
-class Team {
+class TeamMember {
     constructor (name, id, email) {
       this.name = name;
       this.id = id;
