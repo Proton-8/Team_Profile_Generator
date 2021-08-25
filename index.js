@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // start with the top level (parent)
-const Team = require('./info/team');
+const TeamMember = require('./info/teamMember');
 
 // create the three 'options'
 const Manager = require('./info/manager');

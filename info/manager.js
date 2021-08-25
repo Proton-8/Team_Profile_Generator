@@ -1,6 +1,6 @@
-const Team = require('./team')
+const Team = require('./teamMember')
 
-class Manager extends Team {
+class Manager extends TeamMember {
     constructor(name, id, email, specific) {
   // get info from Team
     super(name,id,email);

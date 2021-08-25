@@ -5,6 +5,6 @@ class TeamMember {
       this.name = name;
       this.id = id;
       this.email = email;
-      this.role = "Team";
+      this.role = "TeamMember";
   }
 }

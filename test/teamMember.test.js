@@ -18,16 +18,16 @@ describe("TeamMember", () => {
 
     //initiate the tests 
     it("can set name, id, email", () => {
-      const setExample = new TeamMember("John", 30, "example@example.com")
+      const setExample = new TeamMember("John", 10, "example@example.com")
       expect(setExample.name).toBe("John")
-      expect(setExample.id).toEqual(30)
+      expect(setExample.id).toEqual(10)
       expect(setExample.email).toEqual("example@example.com")
       expect(setExample.role).toEqual("Team")
     });
     it("can get name, id, email, role using getName(), getId(), getEmail(), getRole()", () => {
-      const getExample = new Employee("John", 30, "example@example.com")
+      const getExample = new Employee("John", 10, "example@example.com")
       expect(getExample.getName()).toBe("John")
-      expect(getExample.getId()).toBe(30)
+      expect(getExample.getId()).toBe(10)
       expect(getExample.getEmail()).toBe("example@example.com")
       expect(getExample.getRole()).toBe("Team")
     });
