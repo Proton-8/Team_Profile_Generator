@@ -42,5 +42,30 @@ function addTeam() {
                 choices: ['Manager', 'Engineer', 'Intern'],
             },
   )]
+.then (async (data) =>{
+    if (position === "Engineer") {
+        keyInfo = await inquirer.prompt([
+          { type: "input", message: "What is your Github?", name: "key" },
+        ]);
 
+        let newTeamMember = new Engineer(name, id, email, keyInfo.key);
+        teamArray.push(newTeamMember);
+      } else if (position === "Intern") {
+        keyInfo = await inquirer.prompt([
+          { type: "input", message: "What is your school?", name: "key" },
+        ]);
+
+        let newTeamMember = new Intern(name, id, email, keyInfo.key);
+        teamArray.push(newTeamMember);
+      } else {
+        //   defaults to manager
+        specificInfo = await inquirer.prompt([
+          {
+            type: "input",
+            message: "What is your office number?",
+            name: "key",
+          },
+
+
+}
 }
