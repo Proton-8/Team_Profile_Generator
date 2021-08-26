@@ -8,3 +8,4 @@ class TeamMember {
       this.role = "TeamMember";
   }
 }
+module.exports=TeamMember;
