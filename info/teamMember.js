@@ -8,4 +8,5 @@ class TeamMember {
       this.role = "TeamMember";
   }
 }
+// export back to main
 module.exports=TeamMember;
