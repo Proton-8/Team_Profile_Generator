@@ -10,6 +10,9 @@ const TeamMember = require('./info/teamMember');
 const Manager = require('./info/manager');
 const Engineer = require('./info/engineer');
 const Intern = require('./info/intern');
+const {
+  create
+} = require('domain');
 // create an empty array to start
 const teamArray = [];
 
@@ -56,18 +59,15 @@ function addTeamMember() {
           type: "input",
           message: "What is your Github name?",
           name: "key"
-        }, 
-      ]);
+        }, ]);
         let newTeamMember = new Engineer(name, id, email, keyInfo.key);
         teamArray.push(newTeamMember);
-      }
-       else if (position === "Intern") {
+      } else if (position === "Intern") {
         keyInfo = await inquirer.prompt([{
           type: "input",
           message: "What is your school?",
           name: "key"
-        },
-       ]);
+        }, ]);
 
         let newTeamMember = new Intern(name, id, email, keyInfo.key);
         teamArray.push(newTeamMember);
@@ -77,27 +77,25 @@ function addTeamMember() {
           type: "input",
           message: "What is your office number?",
           name: "key",
-        }, 
-      ]);
+        }, ]);
 
         let newTeamMember = new Manager(name, id, email, keyInfo.key);
 
         teamArray.push(newTeamMember);
       }
 
-      let {add} = await inquirer.prompt([
-        {
+      let {
+        add
+      } = await inquirer.prompt([{
         type: "list",
         message: "Do you want to add another employee?",
         name: "add",
         choices: ["Yes", "No"],
-      },
-     ]);
+      }, ]);
       console.log(add);
       if (add === "Yes") {
         addTeamMember();
-      } 
-      else {
+      } else {
         writeFile();
       }
     })
@@ -110,8 +108,13 @@ function addTeamMember() {
 
 // from the nini project with some modifications   
 
-const generateHTML = (answers) =>
-  `<!DOCTYPE html>
+function createChart() {
+// create a limited list of team members
+  for (i = 0; i < 5; i++) {
+    console.log(employeeArray[i]);
+
+    const generateHTML = (answers) =>
+      `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -132,10 +135,17 @@ const generateHTML = (answers) =>
   </div>
 </div>
 </body>
-</html>`;
+</html>`
 
-// 
-// 
+    // 
+    // 
 
+    const filename = path.join(__dirname, "", "index.html");
 
-addTeamMember();
+    fs.createChart(filename, generateHTML, (err) =>
+      err ? console.log(err) : console.log("Success!")
+    );
+  }
+}
+    addTeamMember();
+    createChart();
