@@ -9,7 +9,7 @@ class Intern extends TeamMember {
     }
 
     getSchool() {
-        return this.specific
+        return this.key
     }
     
     getRole() {

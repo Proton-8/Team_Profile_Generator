@@ -9,7 +9,7 @@ class Engineer extends TeamMember {
     }
 
     getGithub() {
-        return this.specific
+        return this.key
     }
     
     getRole() {

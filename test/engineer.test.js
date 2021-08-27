@@ -1,15 +1,14 @@
 //  engineer code for testing will go here (include Github)
 
 const Engineer = require("../info/engineer");
-const Eningeer = require("../info/engineer");
-const TeamMember = require("../info/teamMember");
+
 
 describe("Engineer", () => {
 
   describe("initialize", () => {
-    it("should create new engineer object with valid inputs of name, id, email, github, role", () => {
+    it("should create new engineer object with valid inputs including github", () => {
 
-      const engineer = new Eningeer("ExampleName",101,"example@example.com", "gitHub");
+      const engineer = new Engineer("ExampleName",101,"example@example.com", "gitHub");
 
   //first sanity check on the basics
       expect(engineer.name).toEqual("ExampleName");
@@ -28,13 +27,13 @@ describe("Engineer", () => {
         expect(setExample.role).toEqual("Engineer")
         expect(setExample.key).toEqual("gitHub")
       });
-      it("can get name, id, email, role and github using getName(), getId(), getEmail(), getRole(), getGitHub()", () => {
-        const getExample = new Engineer("John",10,"example@example.com")
+      it("can get name, id, email, role and github using getName(), getId(), getEmail(), getRole(), getGithub()", () => {
+        const getExample = new Engineer("John",10,"example@example.com","gitHub")
         expect(getExample.getName()).toBe("John")
         expect(getExample.getId()).toBe(10)
         expect(getExample.getEmail()).toBe("example@example.com")
         expect(getExample.getRole()).toBe("Engineer")
-        expect(getExample.getGitHub()).toBe("gitHub")
+        expect(getExample.getGithub()).toBe("gitHub")
       });
     });
   })

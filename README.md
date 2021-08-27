@@ -26,6 +26,24 @@ THEN that GitHub profile opens in a new tab.
 <li> [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
 </p>
 
+
+<h2>  EXAMPLE of the final product in test: </h2>
+
+<img src="Test-verified.gif" alt="Test DEMO GIF">
+
+</p>
+<h2>Screenshot of Test Results</h2>
+
+<img src="Test-verified.jpg" alt="Test DEMO screenshot">
+<p>
+
+
+
+
+
+
+
+
 ### My Contact Info:
 
 Email: RonaShutter@gmail.com<br>
