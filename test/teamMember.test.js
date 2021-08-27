@@ -24,7 +24,7 @@ describe("TeamMember", () => {
       expect(setExample.role).toEqual("TeamMember")
     });
     it("can get name, id, email, role using getName(), getId(), getEmail(), getRole()", () => {
-      const getExample = new Employee("John",10,"example@example.com")
+      const getExample = new TeamMember("John",10,"example@example.com")
       expect(getExample.getName()).toBe("John")
       expect(getExample.getId()).toBe(10)
       expect(getExample.getEmail()).toBe("example@example.com")

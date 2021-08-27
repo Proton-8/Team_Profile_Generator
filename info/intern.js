@@ -1,4 +1,4 @@
-const Team = require('./teamMember')
+const TeamMember = require('./teamMember')
 
 class Intern extends TeamMember {
     constructor(name, id, email, key) {

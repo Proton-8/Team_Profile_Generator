@@ -27,7 +27,7 @@ describe("Engineer", () => {
         expect(setExample.key).toEqual("School")
       });
       it("can get name, id, email, role and github using getName(), getId(), getEmail(), getRole(), getKey()", () => {
-        const getExample = new Employee("John",10,"example@example.com")
+        const getExample = new Intern("John",10,"example@example.com")
         expect(getExample.getName()).toBe("John")
         expect(getExample.getId()).toBe(10)
         expect(getExample.getEmail()).toBe("example@example.com")

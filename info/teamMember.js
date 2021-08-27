@@ -7,6 +7,23 @@ class TeamMember {
       this.email = email;
       this.role = "TeamMember";
   }
-}
+  getName() {
+    return this.name
+  }
+  
+  getId() {
+    return this.id
+  }
+  
+  getEmail() {
+    return this.email
+  }
+  
+  getRole() {
+    return "TeamMember"
+  }
+  }
+  
+
 // export back to main
-module.exports=TeamMember;
+module.exports = TeamMember;
